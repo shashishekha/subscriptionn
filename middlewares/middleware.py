@@ -22,6 +22,7 @@ class SubscriptionCheck(object):
             else:
                 subscription_order = SubscriptionOrder.objects.filter(
                     user = request.user,
+                    is_paid = True, 
                     subscription_end_date = datetime.datetime.today().date()
                 )
 
